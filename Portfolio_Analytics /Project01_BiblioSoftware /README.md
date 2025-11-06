@@ -1,8 +1,4 @@
-Project Title
-
-BiblioSoftware – Integrated Library Management Solution
-
-Project Description
+# BiblioSoftware – Integrated Library Management Solution
 
 BiblioSoftware is an integrated software solution designed to streamline and digitalize the management of library resources.
 The system enables continuous user interaction through a dynamic command-line interface, allowing efficient execution of key operations such as adding, searching, updating, and removing books from the library database.
