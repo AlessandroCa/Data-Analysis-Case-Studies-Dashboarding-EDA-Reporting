@@ -12,7 +12,7 @@ while True:
     except AttributeError:
         print("AttributeError: you aready must enter only these functions: Add books, Remove books, " \
     "Peek books, Borrow books, View the statistics library, View books and Restore books")
-    except:
+    except: #modificare
         print("Error: you haven't entered the functions in correct method, try again")
 
     if user_fuction == "Exit":
@@ -29,11 +29,14 @@ while True:
             print("ValueError: you must enter an integer")
 
     elif user_fuction == "Remove books":
-        user_title = input("Digit the title of book that you want delete")
-        h.remove_book(user_title)
-        print("Perfect, the book has been deleted")
+        try:
+            user_title = input("Digit the title of book that you want delete")
+            h.remove_book(user_title)
+            print("Perfect, the book has been deleted")
+        except: #modificare
+            print(".")
 
-    elif user_fuction == "Peek books":
+    elif user_fuction == "Peek books": #modificare da qui in fondo
         user_title = input("Digit the title of book that you want peek")
         if h.peek_book(user_title) == True:
             print("The selected book is available")
@@ -43,14 +46,20 @@ while True:
     elif user_fuction == "Borrow books":
         user_title = input("Digit the title of book that you want borrow")
         h.borrow_book(user_title)
+
     elif user_fuction == "View the statistics library":
         print(f"The statistics libray are as follows: {h.library_statistics}")
+
     elif user_fuction == "View books":
         print(f"The books available in the library are: {h.view_books()}")
+
     elif user_fuction == "Restore books":
-        user_title = input("Digit the title of book that you want restore")
-        user_copies = int(input("Digit the copies of book"))
-        h.restore_book(user_title, user_copies)
+        try:
+            user_title = input("Digit the title of book that you want restore")
+            user_copies = int(input("Digit the copies of book"))
+            h.restore_book(user_title, user_copies)
+        except ValueError:
+            print("ValueError: you must enter an integer")
 
 
 
