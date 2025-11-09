@@ -1,6 +1,6 @@
-
+#In this file, you can find useful functions for managing a library system.
 books_list = {}
-def add_book(title, copies):
+def add_book(title, copies):     
     if title in books_list:
         books_list[title] += copies
     else:
@@ -10,7 +10,7 @@ def remove_book(title):
     if title in books_list:
         books_list.pop(title)
     else:
-        print("Error: the book doesn't exsist")
+        print("Error: The book doesn't exsist")
 
 def peek_book(title):
     if title in books_list:
@@ -26,9 +26,9 @@ def borrow_book(title):
         if books_list[title] >= 1:
             books_list[title] -= 1
         else:
-            print("Error: the book isn't available")
+            print("Error: The book isn't available")
     else:
-        print("Error: the book doesn't exsist")
+        print("Error: The book doesn't exsist")
 
 def library_statistics():
     statistics_dizionary = {}
@@ -44,7 +44,7 @@ def library_statistics():
 
 def view_books():
     if len(books_list) == 0:
-        print("Error: there aren't books")
+        print("Error: There aren't books")
     else:
         return books_list
 
@@ -55,4 +55,4 @@ def restore_book(title, copies):
         else:
             print("The selected book already has many copies")
     else:
-        print("Error: the book doesn't exsist")
+        print("Error: The book doesn't exsist")
