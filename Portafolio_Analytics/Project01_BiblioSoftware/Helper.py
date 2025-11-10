@@ -31,15 +31,18 @@ def borrow_book(title):
         print("Error: The book doesn't exsist")
 
 def library_statistics():
-    statistics_dizionary = {}
-    total_books = len(books_list)
-    for i in books_list:
-        s = sum(books_list[i])
-    total_copies = s
-    copies_avarage = total_copies / total_books
+    if len(books_list) >=1:
+        statistics_dizionary = {}
+        total_books = len(books_list)
+    try:
+        total_copies = sum(books_list.values())
+    except (TypeError, ValueError):
+        print("TypeError: Unsupported data type in copies")
+        return {}
+    copies_average = (total_copies / total_books) if total_books else 0
     statistics_dizionary["Total books"] = total_books
     statistics_dizionary["Total copies"] = total_copies
-    statistics_dizionary["Copies avarage"] = copies_avarage
+    statistics_dizionary["Copies average"] = copies_average
     return statistics_dizionary
 
 def view_books():
@@ -52,6 +55,7 @@ def restore_book(title, copies):
     if title in books_list:
         if books_list[title] <= 5:
             books_list[title] += copies
+            print(f"Perfect, the selected book has been restored with {copies} more copies")
         else:
             print("The selected book already has many copies")
     else:
