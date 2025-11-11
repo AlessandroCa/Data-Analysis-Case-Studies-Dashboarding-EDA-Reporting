@@ -54,7 +54,7 @@ while True:
     
     else:
         print("Error: you already must enter only these functions: Add books, Remove books, " \
-    "Peek books, Borrow books, View the statistics library, View books and Restore books, try again")
+    "Peek books, Borrow books, View statistics library, View books and Restore books, try again")
 
 
 
