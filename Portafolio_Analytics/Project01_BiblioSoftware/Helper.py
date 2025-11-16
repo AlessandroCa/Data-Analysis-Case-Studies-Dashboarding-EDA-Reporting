@@ -1,18 +1,21 @@
 #In this file, you can find useful functions for managing a library system.
 books_list = {}
 def add_book(title, copies):     
+    title = title.strip().lower()
     if title in books_list:
         books_list[title] += copies
     else:
         books_list[title] = copies
 
 def remove_book(title):
+    title = title.strip().lower()
     if title in books_list:
         books_list.pop(title)
     else:
         print("Error: The book doesn't exsist")
 
 def peek_book(title):
+    title = title.strip().lower()
     if title in books_list:
         if books_list[title] >= 1:
             return True
@@ -22,6 +25,7 @@ def peek_book(title):
         return False
     
 def borrow_book(title):
+    title = title.strip().lower()
     if title in books_list:
         if books_list[title] >= 1:
             books_list[title] -= 1
@@ -52,6 +56,7 @@ def view_books():
         return books_list
 
 def restore_book(title, copies):
+    title = title.strip().lower()
     if title in books_list:
         if books_list[title] <= 5:
             books_list[title] += copies
