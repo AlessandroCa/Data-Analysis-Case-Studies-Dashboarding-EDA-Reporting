@@ -73,6 +73,7 @@ while True:
             print("ValueError: you must enter an integer")
     
     else:
+<<<<<<< HEAD
         print("Error: you already must enter only these functions:")
         print("(1) Add a book")
         print("(2) Remove a book")
@@ -83,6 +84,10 @@ while True:
         print("(7) Restore a book")
         print("(0) Exit")
 
+=======
+        print("Error: you already must enter only these functions: Add books, Remove books, " \
+    "Peek books, Borrow books, View statistics library, View books and Restore books, try again")
+>>>>>>> fb1bc4def9e48b8e39085f555fe29af1d0874be8
 
 
 
