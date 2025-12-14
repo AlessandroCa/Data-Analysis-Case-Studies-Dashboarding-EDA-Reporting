@@ -1,4 +1,4 @@
-
+# In this file, you can find several functions that are useful for managing the library software
 books_list = {}
 def add_book(title, copies):
     if title in books_list:
