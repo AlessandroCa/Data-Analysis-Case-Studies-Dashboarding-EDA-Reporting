@@ -1,4 +1,3 @@
-#In this file, you can find useful functions for managing a library system.
 books_list = {}
 def add_book(title, copies):     
     title = title.strip().lower()
