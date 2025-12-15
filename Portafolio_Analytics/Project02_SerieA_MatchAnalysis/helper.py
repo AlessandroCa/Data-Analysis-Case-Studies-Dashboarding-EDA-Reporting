@@ -1,3 +1,5 @@
+#This file contains the two fundamental functions for the analysis as written in the README
+
 from dataset import li
 data = li
 
