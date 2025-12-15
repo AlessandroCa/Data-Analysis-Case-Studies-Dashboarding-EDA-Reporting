@@ -1,14 +1,12 @@
-# Serie A Match Analysis 2008–2009 – Python Data Processing & Performance Evaluation
+## Serie A Match Analysis (2008–2009) – Python Data Processing & Performance Metrics
 
-This project focuses on analyzing match results from the Italian Serie A 2008–2009 football season using a preloaded Python data structure.
-The dataset, composed of tuples containing match dates, home and away teams, and respective goals, is used to calculate and display team performance metrics through a series of custom-built functions.
+This repository contains a structured analysis of match results from the Italian Serie A 2008–2009 season, based on a preloaded Python dataset representing real match outcomes.
 
-The program performs the following analytical tasks:
+The data is stored as a collection of tuples including match date, home team, away team, and goals scored. Through a set of custom Python functions, the dataset is processed to extract team-level performance indicators and season-wide rankings.
 
-- Computes the total number of points earned by a given team based on wins, draws, and losses.
+The analysis includes:
+- Calculation of total points earned by a selected team according to official league rules.
+- Generation of performance summaries, reporting wins, draws, and losses.
+- Construction of a dictionary-based leaderboard mapping each team to its final season points.
 
-- Returns a performance summary for any team, including total wins, draws, and defeats.
-
-- Generates a dictionary-based leaderboard, mapping each team to its final total points across the entire season.
-
-This project demonstrates skills in data manipulation, algorithmic logic, dictionary structures, and user-interactive Python scripting, applied to a real-world sports dataset.
+The focus of this work is on algorithmic reasoning, dictionary-based aggregation, and clear data transformation logic, demonstrating how raw structured data can be converted into meaningful analytical outputs using Python.
