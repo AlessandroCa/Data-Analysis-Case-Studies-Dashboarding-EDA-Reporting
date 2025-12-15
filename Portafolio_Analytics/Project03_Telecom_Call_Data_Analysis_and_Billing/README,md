@@ -1,8 +1,0 @@
-This project analyzes mobile phone call records to compute customer billing and identify network congestion areas.
-
-Starting from a raw CSV file containing call logs, the project performs data validation, data cleaning, time-based calculations, and aggregation to:
-- compute call durations,
-- calculate monthly bills with free-minute bonuses,
-- detect congested network cells based on call volume.
-
-The focus is on transforming raw, potentially inconsistent data into reliable metrics using Python data structures and analytical logic.
