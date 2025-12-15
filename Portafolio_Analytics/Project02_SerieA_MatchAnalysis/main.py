@@ -1,13 +1,21 @@
+from dataset import li
 import helper as hp
+
 print("Welcome to Serie A Match Analysis 2008-09")
-print("In this project, you can find the standing of that season and two functions:" \
-"(1) Show team points" \
-"(2) Show team results")
+print("(1) Show team points")
+print("(2) Show team results")
+print("(0) Exit")
+
 while True:
-    number_fuction = int(input("Enter number of the function that you want to use it, enter 0 for exit  "))
-    if number_fuction == 1:
-        hp.show_points
-    elif number_fuction == 2:
-        hp.show_results
+    number_function = int(input("\nEnter the function number: "))
+    if number_function == 1:
+        name_team = input("Enter team name: ")
+        hp.show_points(name_team)
+    elif number_function == 2:
+        name_team = input("Enter team name: ")
+        hp.show_results(name_team)
+    elif number_function == 0:
+        print("Goodbye!")
+        break
     else:
-        print("Just type the number of functions you see above")
+        print("Please enter a valid number\n")
