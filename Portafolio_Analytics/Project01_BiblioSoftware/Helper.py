@@ -1,18 +1,20 @@
-# In this file, you can find several functions that are useful for managing the library software
 books_list = {}
-def add_book(title, copies):
+def add_book(title, copies):     
+    title = title.strip().lower()
     if title in books_list:
         books_list[title] += copies
     else:
         books_list[title] = copies
 
 def remove_book(title):
+    title = title.strip().lower()
     if title in books_list:
         books_list.pop(title)
     else:
-        print("Error: the book doesn't exsist")
+        print("Error: The book doesn't exsist")
 
 def peek_book(title):
+    title = title.strip().lower()
     if title in books_list:
         if books_list[title] >= 1:
             return True
@@ -22,37 +24,43 @@ def peek_book(title):
         return False
     
 def borrow_book(title):
+    title = title.strip().lower()
     if title in books_list:
         if books_list[title] >= 1:
             books_list[title] -= 1
         else:
-            print("Error: the book isn't available")
+            print("Error: The book isn't available")
     else:
-        print("Error: the book doesn't exsist")
+        print("Error: The book doesn't exsist")
 
 def library_statistics():
-    statistics_dizionary = {}
-    total_books = len(books_list)
-    for i in books_list:
-        s = sum(books_list[i])
-    total_copies = s
-    copies_avarage = total_copies / total_books
+    if len(books_list) >=1:
+        statistics_dizionary = {}
+        total_books = len(books_list)
+    try:
+        total_copies = sum(books_list.values())
+    except (TypeError, ValueError):
+        print("TypeError: Unsupported data type in copies")
+        return {}
+    copies_average = (total_copies / total_books) if total_books else 0
     statistics_dizionary["Total books"] = total_books
     statistics_dizionary["Total copies"] = total_copies
-    statistics_dizionary["Copies avarage"] = copies_avarage
+    statistics_dizionary["Copies average"] = copies_average
     return statistics_dizionary
 
 def view_books():
     if len(books_list) == 0:
-        print("Error: there aren't books")
+        print("Error: There aren't books")
     else:
         return books_list
 
 def restore_book(title, copies):
+    title = title.strip().lower()
     if title in books_list:
         if books_list[title] <= 5:
             books_list[title] += copies
+            print(f"Perfect, the selected book has been restored with {copies} more copies")
         else:
             print("The selected book already has many copies")
     else:
-        print("Error: the book doesn't exsist")
+        print("Error: The book doesn't exsist")
